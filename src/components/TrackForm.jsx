@@ -151,6 +151,17 @@ const TrackForm = ({ onAddTrack }) => {
             <option value="Rock">Rock</option>
             <option value="Indie">Indie</option>
             <option value="Jazz">Jazz</option>
+            <option value="Hip-Hop">Hip-Hop</option>
+            <option value="Electronic">Electronic</option>
+            <option value="R&B">R&B</option>
+            <option value="Country">Country</option>
+            <option value="Classical">Classical</option>
+            <option value="Metal">Metal</option>
+            <option value="Folk">Folk</option>
+            <option value="Blues">Blues</option>
+            <option value="Reggae">Reggae</option>
+            <option value="Punk">Punk</option>
+            <option value="Soul">Soul</option>
           </select>
           {errors.genre && <span className="error">{errors.genre}</span>}
         </div>

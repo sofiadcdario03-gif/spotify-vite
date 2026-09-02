@@ -6,7 +6,6 @@ const TrackDetail = ({ track }) => {
   const [filterGenre, setFilterGenre] = useState('all')
 
   useEffect(() => {
-    // Sync the selected track when it changes
     setDisplayTrack(track)
   }, [track])
 
@@ -22,7 +21,18 @@ const TrackDetail = ({ track }) => {
     'Pop': '#ff6b6b',
     'Rock': '#4ecdc4',
     'Indie': '#ffe66d',
-    'Jazz': '#95e1d3'
+    'Jazz': '#95e1d3',
+    'Hip-Hop': '#a8e6cf',
+    'Electronic': '#ff8b94',
+    'R&B': '#ffa07a',
+    'Country': '#f0e68c',
+    'Classical': '#dda0dd',
+    'Metal': '#800000',
+    'Folk': '#deb887',
+    'Blues': '#4169e1',
+    'Reggae': '#228b22',
+    'Punk': '#ff4500',
+    'Soul': '#da70d6'
   }
 
   const roleBadgeColor = displayTrack.userRole === 'creator' ? '#dc143c' : '#333'
@@ -43,6 +53,17 @@ const TrackDetail = ({ track }) => {
             <option value="Rock">Rock</option>
             <option value="Indie">Indie</option>
             <option value="Jazz">Jazz</option>
+            <option value="Hip-Hop">Hip-Hop</option>
+            <option value="Electronic">Electronic</option>
+            <option value="R&B">R&B</option>
+            <option value="Country">Country</option>
+            <option value="Classical">Classical</option>
+            <option value="Metal">Metal</option>
+            <option value="Folk">Folk</option>
+            <option value="Blues">Blues</option>
+            <option value="Reggae">Reggae</option>
+            <option value="Punk">Punk</option>
+            <option value="Soul">Soul</option>
           </select>
         </div>
       </div>
