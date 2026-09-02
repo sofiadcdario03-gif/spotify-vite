@@ -23,28 +23,6 @@
   margin: 0;
 }
 
-.filter-control {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.filter-control label {
-  color: #ffffff;
-  font-size: 0.9rem;
-  font-weight: 500;
-}
-
-.filter-control select {
-  background-color: #000000;
-  border: 1px solid #dc143c;
-  border-radius: 6px;
-  padding: 0.4rem 0.8rem;
-  color: #ffffff;
-  font-size: 0.9rem;
-  cursor: pointer;
-}
-
 .detail-content {
   display: flex;
   flex-direction: column;

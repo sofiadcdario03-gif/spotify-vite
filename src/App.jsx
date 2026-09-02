@@ -8,6 +8,7 @@ function App() {
   const [tracks, setTracks] = useState([])
   const [selectedTrack, setSelectedTrack] = useState(null)
   const [view, setView] = useState('form') // 'form' or 'table'
+  const [filterGenre, setFilterGenre] = useState('all')
 
   const handleAddTrack = (track) => {
     setTracks([...tracks, track])
@@ -16,6 +17,14 @@ function App() {
 
   const handleSelectTrack = (track) => {
     setSelectedTrack(track)
+  }
+
+  const handleFilterChange = (genre) => {
+    setFilterGenre(genre)
+    // Clear selected track if it doesn't match the new filter
+    if (selectedTrack && genre !== 'all' && selectedTrack.genre !== genre) {
+      setSelectedTrack(null)
+    }
   }
 
   return (
@@ -39,6 +48,8 @@ function App() {
               tracks={tracks} 
               onSelectTrack={handleSelectTrack}
               selectedTrack={selectedTrack}
+              filterGenre={filterGenre}
+              onFilterChange={handleFilterChange}
             />
             {selectedTrack && (
               <TrackDetail track={selectedTrack} />

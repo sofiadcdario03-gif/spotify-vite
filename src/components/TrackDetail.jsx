@@ -3,7 +3,6 @@ import './TrackDetail.css'
 
 const TrackDetail = ({ track }) => {
   const [displayTrack, setDisplayTrack] = useState(null)
-  const [filterGenre, setFilterGenre] = useState('all')
 
   useEffect(() => {
     setDisplayTrack(track)
@@ -41,31 +40,6 @@ const TrackDetail = ({ track }) => {
     <div className="track-detail">
       <div className="detail-header">
         <h3>Track Details</h3>
-        <div className="filter-control">
-          <label htmlFor="genre-filter">Filter Genre:</label>
-          <select
-            id="genre-filter"
-            value={filterGenre}
-            onChange={(e) => setFilterGenre(e.target.value)}
-          >
-            <option value="all">All Genres</option>
-            <option value="Pop">Pop</option>
-            <option value="Rock">Rock</option>
-            <option value="Indie">Indie</option>
-            <option value="Jazz">Jazz</option>
-            <option value="Hip-Hop">Hip-Hop</option>
-            <option value="Electronic">Electronic</option>
-            <option value="R&B">R&B</option>
-            <option value="Country">Country</option>
-            <option value="Classical">Classical</option>
-            <option value="Metal">Metal</option>
-            <option value="Folk">Folk</option>
-            <option value="Blues">Blues</option>
-            <option value="Reggae">Reggae</option>
-            <option value="Punk">Punk</option>
-            <option value="Soul">Soul</option>
-          </select>
-        </div>
       </div>
 
       <div className="detail-content">
