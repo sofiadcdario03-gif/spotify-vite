@@ -1,0 +1,153 @@
+.track-detail {
+  background-color: #1a0000;
+  border: 2px solid #dc143c;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 8px 16px rgba(220, 20, 60, 0.3);
+  position: sticky;
+  top: 2rem;
+}
+
+.detail-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #333;
+}
+
+.detail-header h3 {
+  color: #dc143c;
+  font-size: 1.3rem;
+  margin: 0;
+}
+
+.filter-control {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.filter-control label {
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.filter-control select {
+  background-color: #000000;
+  border: 1px solid #dc143c;
+  border-radius: 6px;
+  padding: 0.4rem 0.8rem;
+  color: #ffffff;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.detail-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.detail-section h4 {
+  color: #ffffff;
+  font-size: 1.4rem;
+  margin-bottom: 0.75rem;
+}
+
+.badges {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.genre-badge,
+.role-badge {
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #000000;
+}
+
+.detail-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.info-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #222;
+}
+
+.info-item .label {
+  color: #999;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.info-item .value {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.rating-bar {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.rating-label {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.9rem;
+  min-width: 60px;
+}
+
+.rating-track {
+  flex: 1;
+  height: 8px;
+  background-color: #333;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.rating-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #dc143c, #ff6b6b);
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+.rating-value {
+  color: #dc143c;
+  font-weight: 700;
+  font-size: 1.1rem;
+  min-width: 40px;
+  text-align: right;
+}
+
+.track-detail-placeholder {
+  background-color: #1a0000;
+  border: 2px solid #333;
+  border-radius: 12px;
+  padding: 3rem 2rem;
+  text-align: center;
+  color: #666;
+}
+
+.track-detail-placeholder p {
+  font-size: 1rem;
+}
