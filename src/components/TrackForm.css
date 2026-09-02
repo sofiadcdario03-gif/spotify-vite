@@ -1,0 +1,112 @@
+.track-form-container {
+  background-color: #1a0000;
+  border: 2px solid #dc143c;
+  border-radius: 12px;
+  padding: 2rem;
+  max-width: 600px;
+  margin: 0 auto;
+  box-shadow: 0 8px 16px rgba(220, 20, 60, 0.3);
+}
+
+.track-form-container h2 {
+  color: #dc143c;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+.track-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.form-group input,
+.form-group select {
+  background-color: #000000;
+  border: 2px solid #333;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  color: #ffffff;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #dc143c;
+}
+
+.form-group input::placeholder {
+  color: #666;
+}
+
+.error {
+  color: #dc143c;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.radio-group {
+  margin-top: 0.5rem;
+}
+
+.radio-options {
+  display: flex;
+  gap: 2rem;
+  margin-top: 0.5rem;
+}
+
+.radio-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #ffffff;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.radio-label input[type="radio"] {
+  width: 1.2rem;
+  height: 1.2rem;
+  accent-color: #dc143c;
+  cursor: pointer;
+}
+
+.submit-button {
+  background-color: #dc143c;
+  color: #000000;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+.submit-button:hover:not(:disabled) {
+  background-color: #b01230;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(220, 20, 60, 0.4);
+}
+
+.submit-button:disabled {
+  background-color: #333;
+  color: #666;
+  cursor: not-allowed;
+}
