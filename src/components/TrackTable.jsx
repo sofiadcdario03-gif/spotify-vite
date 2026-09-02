@@ -1,12 +1,14 @@
-import React, { useMemo } from 'react'
+import React, { useState, useMemo } from 'react'
 import {
   useReactTable,
   getCoreRowModel,
+  getPaginationRowModel,
   flexRender,
 } from '@tanstack/react-table'
 import './TrackTable.css'
 
 const TrackTable = ({ tracks, onSelectTrack, selectedTrack }) => {
+  const [pagination, setPagination] = useState({ pageIndex: 0, pageSize: 5 })
 
   const columns = useMemo(
     () => [
@@ -38,6 +40,11 @@ const TrackTable = ({ tracks, onSelectTrack, selectedTrack }) => {
     data: tracks,
     columns,
     getCoreRowModel: getCoreRowModel(),
+    getPaginationRowModel: getPaginationRowModel(),
+    state: {
+      pagination,
+    },
+    onPaginationChange: setPagination,
   })
 
   const handleRowClick = (track) => {
@@ -89,6 +96,27 @@ const TrackTable = ({ tracks, onSelectTrack, selectedTrack }) => {
             ))}
           </tbody>
         </table>
+      </div>
+
+      <div className="pagination">
+        <button
+          onClick={() => setPagination(prev => ({ ...prev, pageIndex: Math.max(0, prev.pageIndex - 1) }))}
+          disabled={pagination.pageIndex === 0}
+          className="pagination-button"
+        >
+          Previous
+        </button>
+        <span className="page-info">
+          Page {pagination.pageIndex + 1} of{' '}
+          {Math.ceil(tracks.length / pagination.pageSize)}
+        </span>
+        <button
+          onClick={() => setPagination(prev => ({ ...prev, pageIndex: Math.min(Math.ceil(tracks.length / pagination.pageSize) - 1, prev.pageIndex + 1) }))}
+          disabled={pagination.pageIndex >= Math.ceil(tracks.length / pagination.pageSize) - 1}
+          className="pagination-button"
+        >
+          Next
+        </button>
       </div>
     </div>
   )

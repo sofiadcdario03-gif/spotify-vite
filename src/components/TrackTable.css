@@ -14,6 +14,7 @@
 
 .table-wrapper {
   overflow-x: auto;
+  margin-bottom: 1.5rem;
 }
 
 .track-table {
@@ -75,4 +76,39 @@
 .empty-state p {
   font-size: 1.1rem;
   color: #999;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.pagination-button {
+  background-color: #dc143c;
+  color: #000000;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.pagination-button:hover:not(:disabled) {
+  background-color: #b01230;
+  transform: translateY(-1px);
+}
+
+.pagination-button:disabled {
+  background-color: #333;
+  color: #666;
+  cursor: not-allowed;
+}
+
+.page-info {
+  color: #ffffff;
+  font-weight: 500;
 }
