@@ -36,6 +36,8 @@ const TrackForm = ({ onAddTrack }) => {
       case 'artist':
         if (!value) {
           error = 'Artist name is required'
+        } else if (value.length < 3) {
+          error = 'Artist name must be at least 3 characters'
         }
         break
       case 'rating':
@@ -47,6 +49,8 @@ const TrackForm = ({ onAddTrack }) => {
       case 'label':
         if (!value) {
           error = 'Label name is required'
+        } else if (value.length < 3) {
+          error = 'Label name must be at least 3 characters'
         }
         break
       default:
@@ -117,9 +121,9 @@ const TrackForm = ({ onAddTrack }) => {
   const isFormValid = !Object.values(errors).some(error => error !== '') &&
     formData.title.length >= 3 &&
     formData.genre &&
-    formData.artist &&
+    formData.artist.length >= 3 &&
     formData.rating >= 1 && formData.rating <= 100 &&
-    formData.label
+    formData.label.length >= 3
 
   return (
     <div className="track-form-container">
